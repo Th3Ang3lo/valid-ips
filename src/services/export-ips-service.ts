@@ -1,5 +1,3 @@
-import fs from 'fs'
-
 import { IExportIpsService } from '../contracts/services/export-ips-service'
 
 import { extractIpv4FromString, isValidIpv4 } from '@/utils/ip'
