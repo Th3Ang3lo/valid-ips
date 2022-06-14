@@ -25,9 +25,13 @@ export class ExportIpsService implements IExportIpsService {
       }
 
       if (is_valid_ipv4) is_client ? validIps.push(format) : invalidIps.push(format)
-
-      await object2Csv(validIps, 'ips-valid.csv')
-      await object2Csv(invalidIps, 'ips-to-block.csv')
     }
+
+    console.log("Exportando...")
+
+    await object2Csv(validIps, 'ips-valid.csv')
+    await object2Csv(invalidIps, 'ips-to-block.csv')
+
+    console.log("IPS exportados com sucesso!")
   }
 }
